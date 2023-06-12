@@ -1,0 +1,118 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Text.Primary" Color="#000" Opacity="0.9"/>
+    <SolidColorBrush x:Key="Text.Secondary" Color="#000" Opacity="0.61"/>
+    <SolidColorBrush x:Key="Text.Tertiary" Color="#000" Opacity="0.45"/>
+    <SolidColorBrush x:Key="Text.Disabled" Color="#000" Opacity="0.36"/>
+    <SolidColorBrush x:Key="AccentText.Primary" Color="#003E92"/>
+    <SolidColorBrush x:Key="AccentText.Secondary" Color="#001A68"/>
+    <SolidColorBrush x:Key="AccentText.Tertiary" Color="#005FB8"/>
+    <SolidColorBrush x:Key="AccentText.Disabled" Color="#000" Opacity="0.36"/>
+    <SolidColorBrush x:Key="TextOnAccent.Primary" Color="#FFF"/>
+    <SolidColorBrush x:Key="TextOnAccent.Secondary" Color="#FFF" Opacity="0.7"/>
+    <SolidColorBrush x:Key="TextOnAccent.Disabled" Color="#FFF"/>
+    <SolidColorBrush x:Key="TextOnAccent.SelectedText" Color="#FFF"/>
+    <SolidColorBrush x:Key="Control.Default" Color="#FFF" Opacity="0.7"/>
+    <SolidColorBrush x:Key="Control.Secondary" Color="#F9F9F9" Opacity="0.5"/>
+    <SolidColorBrush x:Key="Control.Tertiary" Color="#F9F9F9" Opacity="0.3"/>
+    <SolidColorBrush x:Key="Control.Disabled" Color="#F9F9F9" Opacity="0.3"/>
+    <SolidColorBrush x:Key="Control.Transparent" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="Control.InputActive" Color="#FFF"/>
+    <SolidColorBrush x:Key="ControlAlt.Transparent" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="ControlAlt.Secondary" Color="#000" Opacity="0.02"/>
+    <SolidColorBrush x:Key="ControlAlt.Tertiary" Color="#000" Opacity="0.06"/>
+    <SolidColorBrush x:Key="ControlAlt.Disabled" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="ControlSolid.Default" Color="#FFF"/>
+    <SolidColorBrush x:Key="ControlStrong.Default" Color="#000" Opacity="0.45"/>
+    <SolidColorBrush x:Key="ControlStrong.Disabled" Color="#FFF" Opacity="0.32"/>
+    <SolidColorBrush x:Key="Subtle.Transparent" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="Subtle.Secondary" Color="#000" Opacity="0.04"/>
+    <SolidColorBrush x:Key="Subtle.Tertiary" Color="#000" Opacity="0.02"/>
+    <SolidColorBrush x:Key="Subtle.Disabled" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="ControlOnImage.Default" Color="#FFF" Opacity="0.79"/>
+    <SolidColorBrush x:Key="ControlOnImage.Secondary" Color="#F3F3F3"/>
+    <SolidColorBrush x:Key="ControlOnImage.Tertiary" Color="#EBEBEB"/>
+    <SolidColorBrush x:Key="ControlOnImage.Disabled" Color="#FFF" Opacity="0"/>
+    <SolidColorBrush x:Key="Accent.Default" Color="#005FB8"/>
+    <SolidColorBrush x:Key="Accent.Secondary" Color="#005FB8" Opacity="0.9"/>
+    <SolidColorBrush x:Key="Accent.Tertiary" Color="#005FB8" Opacity="0.8"/>
+    <SolidColorBrush x:Key="Accent.Disabled" Color="#000" Opacity="0.22"/>
+    <SolidColorBrush x:Key="Accent.SelectedTextBackground" Color="#0078D4"/>
+    <LinearGradientBrush x:Key="Control.Border">
+        <GradientStop Color="#0F000000" Offset="0.9"/>
+        <GradientStop Color="#28000000" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Circle.Border">
+        <GradientStop Color="#0F000000" Offset="0.5"/>
+        <GradientStop Color="#28000000" Offset="0.95"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TextControl.Border">
+        <GradientStop Color="#0F000000" Offset="0.99"/>
+        <GradientStop Color="#72000000" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TextControl.BorderFocused">
+        <GradientStop Color="#0F000000" Offset="0.96"/>
+        <GradientStop Color="#0067C0" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="AccentControl.Border">
+        <GradientStop Color="#14FFFFFF" Offset="0.9"/>
+        <GradientStop Color="#66000000" Offset="1"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ControlStroke.Default" Color="#000" Opacity="0.06"/>
+    <SolidColorBrush x:Key="ControlStroke.Secondary" Color="#000" Opacity="0.16"/>
+    <SolidColorBrush x:Key="ControlStroke.OnAccentDefault" Color="#FFF" Opacity="0.08"/>
+    <SolidColorBrush x:Key="ControlStroke.OnAccentSecondary" Color="#000" Opacity="0.4"/>
+    <SolidColorBrush x:Key="ControlStroke.OnAccentTertiary" Color="#000" Opacity="0.22"/>
+    <SolidColorBrush x:Key="ControlStroke.OnAccentDisabled" Color="#000" Opacity="0.06"/>
+    <SolidColorBrush x:Key="ControlStroke.ForStrongFillWhenOnImage" Color="#FFF" Opacity="0.35"/>
+    <SolidColorBrush x:Key="CardStroke.Default" Color="#000" Opacity="0.06"/>
+    <SolidColorBrush x:Key="CardStroke.DefaultSolid" Color="#EBEBEB"/>
+    <SolidColorBrush x:Key="ControlStrongStroke.Default" Color="#000" Opacity="0.61"/>
+    <SolidColorBrush x:Key="ControlStrongStroke.Disabled" Color="#000" Opacity="0.22"/>
+    <SolidColorBrush x:Key="SurfaceStroke.Default" Color="#757575" Opacity="0.4"/>
+    <SolidColorBrush x:Key="SurfaceStroke.Flyout" Color="#000" Opacity="0.06"/>
+    <SolidColorBrush x:Key="DividerStroke.Default" Color="#000" Opacity="0.08"/>
+    <SolidColorBrush x:Key="Focus.Outer" Color="#000" Opacity="0.9"/>
+    <SolidColorBrush x:Key="Focus.Inner" Color="#FFF"/>
+    <SolidColorBrush x:Key="CardBackground.Default" Color="#FFF" Opacity="0.7"/>
+    <SolidColorBrush x:Key="CardBackground.Secondary" Color="#F6F6F6" Opacity="0.5"/>
+    <SolidColorBrush x:Key="Smoke.Default" Color="#000" Opacity="0.3"/>
+    <SolidColorBrush x:Key="Layer.Default" Color="#FFF" Opacity="0.5"/>
+    <SolidColorBrush x:Key="Layer.Alt" Color="#FFF"/>
+    <SolidColorBrush x:Key="LayerOnAcrylic.Default" Color="#FFF" Opacity="0.25"/>
+    <SolidColorBrush x:Key="SolidBackground.Base" Color="#F3F3F3"/>
+    <SolidColorBrush x:Key="SolidBackground.Secondary" Color="#EEE"/>
+    <SolidColorBrush x:Key="SolidBackground.Tertiary" Color="#F9F9F9"/>
+    <SolidColorBrush x:Key="SolidBackground.Quartenary" Color="#FFF"/>
+    <SolidColorBrush x:Key="MicaBackground.Base" Color="#F3F3F3" Opacity="0.5"/>
+    <SolidColorBrush x:Key="MicaBackground.BaseAlt" Color="#DADADA" Opacity="0.5"/>
+    <SolidColorBrush x:Key="AcrylicBackground.Base" Color="#EEE" Opacity="0.9"/>
+    <SolidColorBrush x:Key="AcrylicBackground.Default" Color="#F9F9F9" Opacity="0.85"/>
+    <SolidColorBrush x:Key="AccentAcrylicBackground.Base" Color="#99EBFF" Opacity="0.9"/>
+    <SolidColorBrush x:Key="AccentAcrylicBackground.Default" Color="#F9F9F9" Opacity="0.8"/>
+    <SolidColorBrush x:Key="System.Attention" Color="#005FB7"/>
+    <SolidColorBrush x:Key="System.Success" Color="#0F7B0F"/>
+    <SolidColorBrush x:Key="System.Caution" Color="#9D5D00"/>
+    <SolidColorBrush x:Key="System.Critical" Color="#C42B1C"/>
+    <SolidColorBrush x:Key="System.Neutral" Color="#000" Opacity="0.45"/>
+    <SolidColorBrush x:Key="System.SolidNeutral" Color="#8A8A8A"/>
+    <SolidColorBrush x:Key="System.AttentionBackground" Color="#F6F6F6" Opacity="0.5"/>
+    <SolidColorBrush x:Key="System.SuccessBackground" Color="#DFF6DD"/>
+    <SolidColorBrush x:Key="System.CautionBackground" Color="#FFF4CE"/>
+    <SolidColorBrush x:Key="System.CriticalBackground" Color="#FDE7E9"/>
+    <SolidColorBrush x:Key="System.NeutralBackground" Color="#000" Opacity="0.02"/>
+    <SolidColorBrush x:Key="System.SolidNeutralBackground" Color="#F3F3F3"/>
+    <SolidColorBrush x:Key="System.SolidAttentionBackground" Color="#EEE"/>
+    <SolidColorBrush x:Key="CaptionCloseText.Primary" Color="#FFF"/>
+    <SolidColorBrush x:Key="CaptionCloseText.Secondary" Color="#FFF" Opacity="0.7"/>
+    <SolidColorBrush x:Key="IllustrationOnAcrylic.Primary" Color="#000" Opacity="0.1"/>
+    <SolidColorBrush x:Key="CaptionCloseFill.Primary" Color="#C42B1C"/>
+    <SolidColorBrush x:Key="CaptionCloseFill.Secondary" Color="#C42B1C" Opacity="0.9"/>
+    <SolidColorBrush x:Key="KeyboardButton.Default" Color="#FFF"/>
+    <SolidColorBrush x:Key="KeyboardButton.Secondary" Color="#FFF" Opacity="0.75"/>
+    <SolidColorBrush x:Key="KeyboardButton.Tertiary" Color="#FFF" Opacity="0.5"/>
+    <SolidColorBrush x:Key="KeyboardButton.Disabled" Color="#FFF" Opacity="0.13"/>
+    <SolidColorBrush x:Key="KeyboardButtonAlt.Default" Color="#FFF" Opacity="0.5"/>
+    <SolidColorBrush x:Key="KeyboardButtonAlt.Secondary" Color="#FFF" Opacity="0.25"/>
+    <SolidColorBrush x:Key="KeyboardButtonAlt.Tertiary" Color="#FFF" Opacity="0.13"/>
+    <SolidColorBrush x:Key="KeyboardButtonAlt.Disabled" Color="#FFF" Opacity="0.13"/>
+</ResourceDictionary>

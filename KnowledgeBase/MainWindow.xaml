@@ -1,0 +1,15 @@
+﻿<Window x:Class="KnowledgeBase.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:control="clr-namespace:KnowledgeBase.Resources.Control" mc:Ignorable="d" Title="MainWindow" Style="{DynamicResource Surfaces.AppSurface}" Loaded="Window_Loaded">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="48" CornerRadius="7" ResizeBorderThickness="14"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="46"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <control:TitleBar/>
+        <control:CommandBar Grid.Row="1"/>
+        <Frame x:Name="MainFrame" Grid.Row="2"/>
+    </Grid>
+</Window>
