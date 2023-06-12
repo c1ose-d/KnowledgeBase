@@ -16,6 +16,12 @@
 	  <Content Include="KnowledgeBase.ico" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.4.23259.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\DatabaseLibrary\DatabaseLibrary.csproj" />
+	</ItemGroup>
+	<ItemGroup>
 		<Resource Include="Resources\Fonts\Segoe Fluent Icons.ttf" />
 		<Resource Include="Resources\Fonts\Segoe UI Variable Static Display.ttf" />
 		<Resource Include="Resources\Images\KnowledgeBase.png" />
@@ -24,5 +30,8 @@
 		<Using Include="System.Windows" />
 		<Using Include="System.Windows.Controls" />
 		<Using Include="KnowledgeBase.Resources.Pages" />
+		<Using Include="DatabaseLibrary" />
+		<Using Include="DatabaseLibrary.Entities" />
+		<Using Include="Microsoft.EntityFrameworkCore" />
 	</ItemGroup>
 </Project>

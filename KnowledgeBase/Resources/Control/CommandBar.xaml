@@ -15,7 +15,7 @@
         </Grid.ColumnDefinitions>
         <image:Symbol Margin="12,0"/>
         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="Add" Content="Add"/>
+            <Button x:Name="Add" Content="&#xE710;" Style="{DynamicResource CommandBar.CommandBarButton.IconOnly}" Click="Add_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>
