@@ -26,12 +26,17 @@ namespace KnowledgeBase.Cards
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            using (KnowledgeBaseContext db = new())
+            {
+                db.Add(new Solution { Title = NameCard.Text, Description = DescriptionCard.Text, TagId = Convert.ToInt32(/*я не ебу, как взять этот kind*/) });
+                db.SaveChanges(); //сукаблять
+                Close();
+            }
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
     }
 }
