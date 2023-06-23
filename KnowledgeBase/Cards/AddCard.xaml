@@ -12,25 +12,37 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
-            <Label Content=" Название " Margin="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="NameCard" Text="aaeeeeeeeeeeeeeeea" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="380"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2">
-            <Label Content="      Тег      " Margin="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="TagCard" Text="aaeeeeeeeeeeeeeeea" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="380"/>
-            <ComboBox ItemsSource="{Binding }" DisplayMemberPath="kind"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
-            <Label Content="Описание" Margin="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBox x:Name="DescriptionCard" Text="adddddddddffffffffffffffffffhhhhhhhhhhhhhhhhhhfffffffffffdddddddddddddddddddddddeeeeea" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="380"/>
-        </StackPanel>
-        <Button x:Name="SaveButton" Content="Сохранить" Click="Save_Click" Grid.Row="3" Grid.Column="0" Margin="70,30,70,30"/>
-        <Button x:Name="CancelButton" Content="Отменить" Click="Cancel_Click" Grid.Row="3" Grid.Column="1"  Margin="70,30,70,30"/>
+        <Label Content="Название" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="Solution_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
+        <Label Content="Тег" Grid.Row="1" Margin="30,0" VerticalAlignment="Center"/>
+        <ComboBox x:Name="Solution_Tag" Grid.Row="1" Grid.Column="1" Margin="30,0" DisplayMemberPath="Kind"/>
+        <Label Content="Описание" Grid.Row="2" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="Solution_Description" Grid.Row="2" Margin="30,0" Grid.Column="1" VerticalAlignment="Center" TextWrapping="Wrap" MaxWidth="380" MinLines="3"/>
+        <Grid Grid.Row="3" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <ListView x:Name="Steps" MaxHeight="100"/>
+            <StackPanel Grid.Column="1">
+                <Button Content="Д" Margin="3"/>
+                <Button Content="Р" Margin="3"/>
+                <Button Content="У" Margin="3"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="4" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Accept" Content="Сохранить" Margin="30,15" Click="Save_Click"/>
+            <Button x:Name="Cancel" Grid.Column="1" Content="Отменить" Margin="30,15" Click="Cancel_Click"/>
+        </Grid>
     </Grid>
 </Window>

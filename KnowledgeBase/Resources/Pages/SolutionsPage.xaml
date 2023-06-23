@@ -5,6 +5,7 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding Title}" Margin="5"/>
+                        <TextBlock Text="{Binding Tag.Kind}" Margin="5"/>
                         <TextBlock Text="{Binding Description}" Margin="5"/>
                     </StackPanel>
                 </DataTemplate>
