@@ -5,5 +5,5 @@ public class Step
     public int Id { get; set; }
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
-    public Solution? Solution { get; set; }
+    public Solution? Solutions { get; set; }
 }

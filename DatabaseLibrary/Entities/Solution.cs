@@ -6,7 +6,7 @@ public class Solution
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
     public int TagId { get; set; }
-    public List<Tag> Tags { get; set; } = new();
+    public List<Step> Steps { get; set; } = new();
 
     public Tag? Tag { get; set; }
 }
