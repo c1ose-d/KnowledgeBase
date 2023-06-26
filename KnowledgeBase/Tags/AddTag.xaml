@@ -5,25 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KnowledgeBase.Tags"
         mc:Ignorable="d"
-        Title="Добавление тега" Height="300" Width="550">
+        Title="Теги" Height="300" Width="550"
+        Loaded="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Label Content="Название" Margin="30,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="Tag_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
-        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+        <Label Content="Теги" Margin="30,0" VerticalAlignment="Center"/>
+        <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Accept" Content="Сохранить" Margin="30,40" Click="Save_Click"/>
-            <Button x:Name="Cancel" Content="Отменить" Grid.Column="1" Margin="30,40" Click="Cancel_Click"/>
+            <ListView x:Name="Tags" Margin="15">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Kind}" Margin="5"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel Grid.Column="1" Margin="0,15,0,0">
+                <Button x:Name="Add" Content="добавить" Margin="5" Click="Add_Click"/>
+                <Button x:Name="Edit" Content="редактировать" Margin="5" Click="Edit_Click"/>
+                <Button x:Name="Delete" Content="удалить нахер" Margin="5" Click="Delete_Click"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

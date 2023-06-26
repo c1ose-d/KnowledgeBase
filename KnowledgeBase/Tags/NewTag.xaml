@@ -1,0 +1,29 @@
+﻿<Window x:Class="KnowledgeBase.Tags.NewTag"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KnowledgeBase.Tags"
+        mc:Ignorable="d"
+        Title="Добавлене тега" Height="300" Width="550">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Название" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="Tag_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Accept" Content="Сохранить" Margin="30,40" Click="Save_Click"/>
+            <Button x:Name="Cancel" Content="Отменить" Grid.Column="1" Margin="30,40" Click="Cancel_Click"/>
+        </Grid>
+    </Grid>
+</Window>

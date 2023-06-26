@@ -1,62 +1,78 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-
-namespace KnowledgeBase.Tags
+﻿namespace KnowledgeBase.Tags
 {
     /// <summary>
     /// Логика взаимодействия для AddTag.xaml
     /// </summary>
     public partial class AddTag : Window
     {
+        Tag SelectedTag;
         public AddTag()
         {
             InitializeComponent();
+            using KnowledgeBaseContext db = new();
+            Tags.ItemsSource = db.Tags.ToList();
+            db.SaveChanges();
         }
 
-        private void Save_Click(object sender, RoutedEventArgs e)
+
+        private void Add_Click(object sender, RoutedEventArgs e)
         {
-            if (!TagExists())
+            NewTag window = new NewTag();
+            window.Show();
+            window.Closed += Window_Closed;
+        }
+
+        private void Window_Closed(object? sender, EventArgs e)
+        {
+            using KnowledgeBaseContext db = new();
+            Tags.ItemsSource = db.Tags.ToList();
+
+        }
+
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            NewTag window = new NewTag();
+
+            if (Tags_MouseDoubleClick() != null)
             {
-                using (KnowledgeBaseContext db = new())
+                try
                 {
-                    db.Tags.Add(new Tag
-                    { 
-                        Kind = Tag_Title.Text
-                    });
-                    db.SaveChanges();
-                    Close();
+                    window.Show();
+                    using (KnowledgeBaseContext db = new())
+                    {
+                        db.Tags.Remove(GetSelectedTag());
+                        db.SaveChanges();
+                    }
                 }
+                catch { }
             }
+            window.Closed += Window_Closed;
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private bool TagExists()
+        private void Delete_Click(object sender, RoutedEventArgs e)
         {
             using (KnowledgeBaseContext db = new())
             {
-                if (db.Tags.Where(x => x.Kind == Tag_Title.Text).Count() != 0)
-                {
-                    MessageBox.Show("Тег уже существует", "какой уебищный дизайн окна");
-                    return true;
-                }
+                db.Tags.Remove(GetSelectedTag());
+                db.SaveChanges();
+                Tags.ItemsSource = db.Tags.ToList();
             }
-            return false;
+        }
+
+        private Tag Tags_MouseDoubleClick()
+        {
+            if ((Tag)Tags.SelectedItem != null)
+            {
+                SelectedTag = (Tag)Tags.SelectedItem;
+            }
+            return SelectedTag;
+        }
+
+        public Tag GetSelectedTag()
+        {
+            SelectedTag = (Tag)Tags.SelectedItem;
+            return SelectedTag;
         }
     }
 }
