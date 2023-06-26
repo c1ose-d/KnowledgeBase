@@ -19,7 +19,7 @@
         <Label Content="Название" Margin="30,0" VerticalAlignment="Center"/>
         <TextBox x:Name="Step_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
         <Label Content="Описание" Grid.Row="1" Margin="30,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="Step_descroption" Grid.Column="1" Grid.Row="1" Margin="30,0" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="Step_Description" Grid.Column="1" Grid.Row="1" Margin="30,0" VerticalAlignment="Center" TextWrapping="Wrap"/>
             <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

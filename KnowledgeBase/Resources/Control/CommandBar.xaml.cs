@@ -14,4 +14,10 @@ public partial class CommandBar : UserControl
         AddCard window = new AddCard();
         window.Show();
     }
+
+    private void Tags_Click(object sender, RoutedEventArgs e)
+    {
+        AddTag window = new();
+        window.Show();
+    }
 }

@@ -16,6 +16,7 @@
         <image:Symbol Margin="12,0"/>
         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="Add" Content="&#xE710;" Style="{DynamicResource CommandBar.CommandBarButton.IconOnly}" Click="Add_Click"/>
+            <Button x:Name="Tags" Content="Тэги" Click="Tags_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

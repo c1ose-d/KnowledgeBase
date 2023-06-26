@@ -29,7 +29,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="Steps" MaxHeight="100"/>
+            <ListView x:Name="Steps" MaxHeight="100" MouseDoubleClick="Steps_MouseDoubleClick"/>
             <StackPanel Grid.Column="1">
                 <Button Content="Д" Margin="3" Click="Add_Click"/>
                 <Button Content="Р" Margin="3" Click="Edit_Click"/>    

@@ -4,6 +4,7 @@ public class KnowledgeBaseContext : DbContext
 {
     public DbSet<Tag> Tags => Set<Tag>();
     public DbSet<Solution> Solutions => Set<Solution>();
+    public DbSet<Step> Steps => Set<Step>();
 
     public KnowledgeBaseContext() => Database.EnsureCreated();
 

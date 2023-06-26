@@ -7,16 +7,22 @@ public partial class AddCard : Window
     public AddCard()
     {
         InitializeComponent();
-
         using KnowledgeBaseContext db = new();
         Solution_Tag.ItemsSource = db.Tags.ToList();
+        //if (db.Steps is not null) Steps.ItemsSource = db.Steps.ToList();
+
+        db.Tags.Add(new Tag
+        {
+            Kind = "хуе",
+        });
+        db.SaveChanges();
     }
 
     private void Save_Click(object sender, RoutedEventArgs e)
     {
         using (KnowledgeBaseContext db = new())
         {
-            db.Add(new Solution
+            db.Solutions.Add(new Solution
             {
                 Title = Solution_Title.Text,
                 Description = Solution_Description.Text,
@@ -50,12 +56,21 @@ public partial class AddCard : Window
     {
         AddStep window = new AddStep();
         window.Show();
+        window.Closed += Window_Closed;
+    }
+
+    private void Window_Closed(object? sender, EventArgs e)
+    {
+        using KnowledgeBaseContext db = new();
+        Steps.ItemsSource = db.Steps.Where(s => s.SolutionId == 0).ToList();
+
     }
 
     private void Edit_Click(object sender, RoutedEventArgs e)
     {
         AddStep window = new AddStep();
         window.Show();
+        window.Closed += Window_Closed;
     }
 
     private void Delete_Click(object sender, RoutedEventArgs e)
