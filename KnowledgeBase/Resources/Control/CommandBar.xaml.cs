@@ -1,4 +1,5 @@
 ﻿using KnowledgeBase.Cards;
+using KnowledgeBase.Tags;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Windows.Navigation;
 

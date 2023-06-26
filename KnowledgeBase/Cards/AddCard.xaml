@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KnowledgeBase.Cards"
         mc:Ignorable="d"
-        Title="AddCard" Height="400" Width="550">
+        Title="Создание карточки" Height="400" Width="550">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
