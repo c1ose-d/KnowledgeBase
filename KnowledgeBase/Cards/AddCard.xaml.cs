@@ -1,7 +1,9 @@
 ﻿namespace KnowledgeBase.Cards;
+using KnowledgeBase.Tags;
 
 public partial class AddCard : Window
 {
+    Step SelectedStep;
     public AddCard()
     {
         InitializeComponent();
@@ -28,4 +30,49 @@ public partial class AddCard : Window
 
     private void Cancel_Click(object sender, RoutedEventArgs e) =>
         Close();
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Button_Click_1(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Button_Click_2(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Add_Click(object sender, RoutedEventArgs e)
+    {
+        AddStep window = new AddStep();
+        window.Show();
+    }
+
+    private void Edit_Click(object sender, RoutedEventArgs e)
+    {
+        AddStep window = new AddStep();
+        window.Show();
+    }
+
+    private void Delete_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void Steps_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+        if ((Step)Steps.SelectedItem != null)
+        {
+            SelectedStep = (Step)Steps.SelectedItem;
+        }
+    }
+
+    public Step GetSelectedStep()
+    {
+        return SelectedStep;
+    }
 }

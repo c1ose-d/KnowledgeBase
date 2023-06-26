@@ -31,9 +31,9 @@
             </Grid.ColumnDefinitions>
             <ListView x:Name="Steps" MaxHeight="100"/>
             <StackPanel Grid.Column="1">
-                <Button Content="Д" Margin="3"/>
-                <Button Content="Р" Margin="3"/>
-                <Button Content="У" Margin="3"/>
+                <Button Content="Д" Margin="3" Click="Add_Click"/>
+                <Button Content="Р" Margin="3" Click="Edit_Click"/>    
+                <Button Content="У" Margin="3" Click="Delete_Click"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="4" Grid.ColumnSpan="2">
