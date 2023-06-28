@@ -20,11 +20,11 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Label Content="Название" Margin="30,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="Solution_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBlock x:Name="Solution_Title" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
         <Label Content="Тег" Grid.Row="1" Margin="30,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="Solution_Tag" Grid.Column="1" Grid.Row="1" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBlock x:Name="Solution_Tag" Grid.Column="1" Grid.Row="1" Margin="30,0" VerticalAlignment="Center"/>
         <Label Content="Описание" Grid.Row="2" Margin="30,0" VerticalAlignment="Center"/>
-        <TextBox x:Name="Solution_Description" Grid.Row="2" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
+        <TextBlock x:Name="Solution_Description" Grid.Row="2" Grid.Column="1" Margin="30,0" VerticalAlignment="Center"/>
         <Label Content="Шаги" Grid.Row="3" Margin="30,0" VerticalAlignment="Center"/>
         <ListView x:Name="StepList" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Margin="30,10">
             <ListView.ItemTemplate>
