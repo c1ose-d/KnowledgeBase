@@ -13,7 +13,6 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Теги" Margin="30,0" VerticalAlignment="Center"/>
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -28,10 +27,10 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <StackPanel Grid.Column="1" Margin="0,15,0,0">
-                <Button x:Name="Add" Content="добавить" Margin="5" Click="Add_Click"/>
-                <Button x:Name="Edit" Content="редактировать" Margin="5" Click="Edit_Click"/>
-                <Button x:Name="Delete" Content="удалить нахер" Margin="5" Click="Delete_Click"/>
+            <StackPanel Grid.Column="1" Margin="0,15,0,0" Width="auto">
+                <Button x:Name="Add" Content="&#xe710;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Add_Click"/>
+                <Button x:Name="Edit" Content="&#xe70f;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Edit_Click"/>
+                <Button x:Name="Delete" Content="&#xe74d;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Delete_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

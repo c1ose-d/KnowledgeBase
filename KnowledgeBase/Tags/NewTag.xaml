@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KnowledgeBase.Tags"
         mc:Ignorable="d"
-        Title="Добавлене тега" Height="300" Width="550">
+        Title="Создание тега" Height="300" Width="550">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
