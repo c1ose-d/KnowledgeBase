@@ -10,5 +10,8 @@ public partial class SolutionsPage : Page
         Solutions.ItemsSource = db.Solutions.Include(s => s.Tag).ToList();
     }
 
-    private void Page_Loaded(object sender, RoutedEventArgs e) { }
+    private void Solutions_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+    {
+
+    }
 }

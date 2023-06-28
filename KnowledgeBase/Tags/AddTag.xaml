@@ -19,7 +19,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <ListView x:Name="Tags" Margin="15">
+            <ListView x:Name="Tags" Margin="15" MouseDoubleClick="Tags_MouseDoubleClick">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>

@@ -1,32 +1,37 @@
-﻿namespace KnowledgeBase.Tags
+﻿namespace KnowledgeBase.Tags;
+
+public partial class NewTag : Window
 {
-    /// <summary>
-    /// Логика взаимодействия для NewTag.xaml
-    /// </summary>
-    public partial class NewTag : Window
+    public NewTag(Tag? tag = null)
     {
-        public NewTag()
-        {
-            InitializeComponent();
-        }
+        Tag = tag;
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            using (KnowledgeBaseContext db = new())
-            {
-                db.Tags.Add(new Tag
-                {
-                    Kind = Tag_Title.Text
-                });
-                db.SaveChanges();
-            }
-            Close();
-        }
-
+        InitializeComponent();
     }
+
+    private new Tag? Tag { get; set; }
+
+    private void Cancel_Click(object sender, RoutedEventArgs e) =>
+        Close();
+
+    private void Save_Click(object sender, RoutedEventArgs e)
+    {
+        using KnowledgeBaseContext db = new();
+        if (Tag == null)
+        {
+            db.Tags.Add(new Tag
+            {
+                Kind = Tag_Title.Text
+            });
+            db.SaveChanges();
+        }
+        else
+        {
+            Tag def = db.Tags.Where(t => t.Id == Tag.Id).First();
+            def.Kind = Tag_Title.Text;
+            db.SaveChanges();
+        }
+        Close();
+    }
+
 }
