@@ -28,7 +28,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel Grid.Column="1" Margin="0,15,0,0" Width="auto">
-                <Button x:Name="Add" Content="&#xe710;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Add_Click"/>
+                <Button x:Name="Add" Content="&#xe710;"  FontFamily="Segoe Fluent Icons" Margin="5" Click="Add_Click"/>
                 <Button x:Name="Edit" Content="&#xe70f;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Edit_Click"/>
                 <Button x:Name="Delete" Content="&#xe74d;" FontFamily="Segoe Fluent Icons" Margin="5" Click="Delete_Click"/>
             </StackPanel>

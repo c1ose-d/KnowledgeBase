@@ -34,4 +34,9 @@ public partial class NewTag : Window
         Close();
     }
 
+    private void Window_Loaded(object sender, RoutedEventArgs e)
+    {
+        if (Tag != null)
+            Tag_Title.Text = Tag.Kind;
+    }
 }

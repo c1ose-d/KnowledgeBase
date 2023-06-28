@@ -15,8 +15,8 @@
         </Grid.ColumnDefinitions>
         <image:Symbol Margin="12,0"/>
         <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="Add" Content="&#xE710;" Style="{DynamicResource CommandBar.CommandBarButton.IconOnly}" Click="Add_Click"/>
-            <Button x:Name="Tags" Content="Тэги" Click="Tags_Click"/>
+            <Button x:Name="Add" Content="Новая карточка" Margin="10,4" Padding="5" Click="Add_Click"/>
+            <Button x:Name="Tags" Content="Теги" Margin="10,4" Padding="9" Click="Tags_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

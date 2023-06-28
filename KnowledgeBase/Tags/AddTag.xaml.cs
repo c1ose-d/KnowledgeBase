@@ -27,6 +27,7 @@ public partial class AddTag : Window
     {
         NewTag window = new((Tag)Tags.SelectedItem);
         window.Show();
+        window.Closed += Window_Closed;
     }
 
     private void Delete_Click(object sender, RoutedEventArgs e)
@@ -41,5 +42,6 @@ public partial class AddTag : Window
     {
         NewTag window = new((Tag)Tags.SelectedItem);
         window.Show();
+        window.Closed += Window_Closed;
     }
 }
