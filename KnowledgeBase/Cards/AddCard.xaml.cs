@@ -19,7 +19,8 @@ public partial class AddCard : Window
             Description = Solution_Description.Text,
             TagId = ((Tag)Solution_Tag.SelectedItem).Id
         });
-        int solutionId = db.Solutions.Last().Id;
+        db.SaveChanges();
+        int solutionId = db.Solutions.ToList().Last().Id;
         foreach (Step step in Steps.Items)
         {
             step.SolutionId = solutionId;
