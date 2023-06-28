@@ -21,12 +21,12 @@ public partial class AddTag : Window
     {
         using KnowledgeBaseContext db = new();
         Tags.ItemsSource = db.Tags.ToList();
-
     }
 
     private void Edit_Click(object sender, RoutedEventArgs e)
     {
         NewTag window = new((Tag)Tags.SelectedItem);
+        window.Show();
     }
 
     private void Delete_Click(object sender, RoutedEventArgs e)
@@ -39,6 +39,7 @@ public partial class AddTag : Window
 
     private void Tags_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-
+        NewTag window = new((Tag)Tags.SelectedItem);
+        window.Show();
     }
 }
