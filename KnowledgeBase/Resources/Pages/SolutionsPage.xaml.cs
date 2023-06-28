@@ -13,7 +13,7 @@ public partial class SolutionsPage : Page
 
     private void Solutions_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
     {
-        ViewSolution window = new();
+        ViewSolution window = new((Solution)Solutions.SelectedItem);
         window.Show();
         window.Closed += Window_Closed;
     }

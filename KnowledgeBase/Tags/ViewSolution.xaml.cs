@@ -1,32 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using KnowledgeBase.Cards;
+using KnowledgeBase.Resources.Pages;
+using DatabaseLibrary;
 
 namespace KnowledgeBase.Tags
 {
-    /// <summary>
-    /// Interaction logic for ViewSolution.xaml
-    /// </summary>
     public partial class ViewSolution : Window
     {
-        public ViewSolution()
+        Solution? solution;
+        public ViewSolution(Solution? solution = null)
         {
+            this.solution = solution;
             InitializeComponent();
+            using KnowledgeBaseContext db = new();
+            Solution_Title.Text = solution?.Title;
+            Solution_Tag.Text = solution?.Tag.Kind;
+            Solution_Description.Text = solution?.Description;
+            StepList.ItemsSource = db.Steps.Where(x => x.SolutionId == solution.Id).ToList();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-
+            using KnowledgeBaseContext db = new();
+            db.Solutions.Remove(solution);
+            db.SaveChanges(); //он говорит, что нихуя не затрагивается, что он несет, блять
         }
     }
 }
