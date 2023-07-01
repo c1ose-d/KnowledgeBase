@@ -22,7 +22,8 @@ namespace KnowledgeBase.Tags
         {
             using KnowledgeBaseContext db = new();
             db.Solutions.Remove(solution);
-            db.SaveChanges(); //он говорит, что нихуя не затрагивается, что он несет, блять
+            db.SaveChanges();
+            Close();
         }
     }
 }
