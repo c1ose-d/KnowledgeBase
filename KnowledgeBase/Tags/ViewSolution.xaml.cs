@@ -1,28 +1,28 @@
-﻿using KnowledgeBase.Cards;
-using KnowledgeBase.Resources.Pages;
-using DatabaseLibrary;
+﻿namespace KnowledgeBase.Tags;
 
-namespace KnowledgeBase.Tags
+public partial class ViewSolution : Window
 {
-    public partial class ViewSolution : Window
+    public ViewSolution(Solution solution)
     {
-        Solution? solution;
-        public ViewSolution(Solution? solution = null)
-        {
-            this.solution = solution;
-            InitializeComponent();
-            using KnowledgeBaseContext db = new();
-            Solution_Title.Text = solution?.Title;
-            Solution_Tag.Text = solution?.Tag.Kind;
-            Solution_Description.Text = solution?.Description;
-            StepList.ItemsSource = db.Steps.Where(x => x.SolutionId == solution.Id).ToList();
-        }
+        Solution = solution;
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            using KnowledgeBaseContext db = new();
-            db.Solutions.Remove(solution);
-            db.SaveChanges(); //он говорит, что нихуя не затрагивается, что он несет, блять
-        }
+        InitializeComponent();
+
+        using KnowledgeBaseContext db = new();
+        Solution_Title.Text = Solution.Title;
+        Solution_Tag.Text = Solution.Tag?.Kind;
+        Solution_Description.Text = Solution.Description;
+        StepList.ItemsSource = db.Steps.Where(s => s.SolutionId == Solution.Id).ToList();
+    }
+
+    private Solution Solution { get; set; }
+
+    private void Delete_Click(object sender, RoutedEventArgs e)
+    {
+        using KnowledgeBaseContext db = new();
+        Solution def = db.Solutions.Where(s => s.Id == Solution.Id).First();
+        db.Solutions.Remove(def);
+        db.SaveChanges();
+        Close();
     }
 }
